@@ -1,0 +1,476 @@
+1. What is Managed or Unmanaged Code? 
+ 
+Managed Code
+ 
+“Managed code is the code that is developed using the .NET framework and its supported programming languages such as C# or VB.NET. Managed code is directly executed by the Common Language Runtime (CLR or Runtime) and its lifecycle including object creation, memory allocation, and object disposal is managed by the Runtime. Any language that is written in .NET Framework is managed code".
+
+Unmanaged Code
+ 
+The code that is developed outside of the .NET framework is known as unmanaged code. 
+ 
+“Applications that do not run under the control of the CLR are said to be unmanaged. Languages such as C or C++ or Visual Basic are unmanaged.
+The object creation, execution, and disposal of unmanaged code is directly managed by the programmers. If programmers write bad code, it may lead to memory leaks and unwanted resource allocations.”
+ 
+The .NET Framework provides a mechanism for unmanaged code to be used in managed code and vice versa. The process is done with the help of wrapper classes
+/////////////////////////////////////////////////////////
+
+4. What is Boxing and Unboxing in C#? 
+ 
+Boxing and Unboxing both are used for type conversions.
+ 
+The process of converting from a value type to a reference type is called boxing. Boxing is an implicit conversion. Here is an example of boxing in C#.
+1.	// Boxing  
+2.	int anum = 123;  
+3.	Object obj = anum;  
+4.	Console.WriteLine(anum);  
+5.	Console.WriteLine(obj); 
+The process of converting from a reference type to a value type is called unboxing. Here is an example of unboxing in C#.
+1.	// Unboxing  
+2.	Object obj2 = 123;  
+3.	int anum2 = (int)obj;  
+4.	Console.WriteLine(anum2);  
+5.	Console.WriteLine(obj);  
+
+
+
+//////////////////////////////////////////////////////////
+
+OOPS Conpects:
+### OOPS Concepts
+* Major pillars
+    1. Abstraction
+    2. Encapsulation
+    3. Modularity
+    4. Hierarchy
+* Minor pillars
+    1. Typing / Polymorphism
+    2. Concurrency
+    3. Persistence
+
+Abstraction:
+
+Data Abstraction is the property by virtue of which only the essential details are displayed to the user.The trivial or the non-essentials units are not displayed to the user. Ex: A car is viewed as a car rather than its individual components
+
+#### Abstraction
+* Abstraction is a major pillar of oops.
+* Process of getting essential things from object/system is called as a abstraction.
+* Abstraction focuses on outer/external behaviour of the object.
+* Abstraction focuses on the essential characteristics of some object, relative to the perspective of the viewer.
+* Using abstraction, we can achieve simplicity.
+
+#### Encapsulation
+* Encapsulation is a major pillar of oops.
+* Definition:
+    1. Binding of data and code together is called encapsulation.
+    2. Implementation of abstraction is called as encapsulation.
+* If we define class then we implements encapsulation.
+* Abstraction and encapsulation are complementary concepts: Abstraction focuses on the observable behavior of an object, whereas encapsulation focuses on the implementation that gives rise to this behavior. 
+* Using encapsulation, we can achieve data hiding.
+
+It is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates. Another way to think about encapsulation is, it is a protective shield that prevents the data from being accessed by the code outside this shield. 
+
+
+#### Modularity
+* It is a major pillar of oops.
+* It is a process of design and assembling system using small parts/modules.
+* Using modularity, we can minimize module dependancy.
+* With the help of jar file,we can achive modularity.
+
+
+####Inheritance/ Hierarchy
+* It is a major pillar of oops.
+* Level/Order/Ranking of abstraction is called as hierarchy
+* Using hierarchy, we can achieve reusability.
+    - We can reduce development time
+    - We can reduce development cost
+    - We can reduce developers effort
+
+Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object 
+--Act of deriving new Things From Existing Thing.
+Oriented programming system).
+* Types of Hierarchy:
+1. Has-a / Part-of  :   Association
+2. Is-a / Kind-of   :   Inheritance / Generalization
+3. Use-a            :   Dependancy
+4. Creates-a        :   Instantiation
+
+##### Association
+* Example:
+    1. Employee has-a joinDate
+    2. Car has-a engine
+    3. Room has-a Wall
+* If has-a relationship is exist between types then we should use association.
+* Let us consider example of car and engine
+    1. Car has-a engine
+    2. Engine is part of car
+
+*
+#### Typing / Polymorphism.
+* It is a minor pillar of oops.
+* Typing is also called as Polymorphism.
+* Polymorphism = Poly(many) + morphism(behavior)
+* An ability og any object to take multiple forms is called as Polymorphism.
+* Using Polymorphism, we can reduce maintenance of the system
+
+--The word polymorphism means having many forms. In simple words, we can define polymorphism as the ability of a message to be displayed in more than one form. 
+
+Real-life Illustration: Polymorphism
+
+A person at the same time can have different characteristics. Like a man at the same time is a father, a husband, an employee. So the same person possesses different behavior in different situations. This is called polymorphism. 
+* Types of Polymorphism:
+    1. Compile time Polymorphism
+        -  Static binding/ Early binding / Weak Typing / False Polymorphism
+        -  We can achieve it using method overloading.
+    2. Runtime Polymorphism
+        - Dynamic binding/ Late binding / Strong Typing / True Polymorphism
+        -  We can achieve it using method overriding.
+#### Concurrency
+* It is a minor pillar of oops.
+* Process of executing multiple task simultaneously is called as concurrency.
+* Using concurrency, we can utilize hardware resources efficiently.
+* Using thread we can achieve concurrency.
+#### Persistence
+* It is a minor pillar of oops.
+* Process of maintaining state of instance on HDD is called as Persistence.
+* We can implement it using File and Database.
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+8. What is the difference between “continue” and “break” statements in C#? 
+ 
+Using break statement, you can 'jump out of a loop' whereas by using a continue statement, you can 'jump over one iteration' and then resume your loop execution.
+ 
+Eg. Break Statement  
+1.	using System;  
+2.	using System.Collections;  
+3.	using System.Linq;  
+4.	using System.Text;  
+5.	namespace break_example {  
+6.	    Class brk_stmt {  
+7.	        public static void main(String[] args) {  
+8.	            for (int i = 0; i <= 5; i++) {  
+9.	                if (i == 4) {  
+10.	                    break;  
+11.	                }  
+12.	                Console.WriteLine("The number is " + i);  
+13.	                Console.ReadLine();  
+14.	            }  
+15.	        }  
+16.	    }  
+17.	}  
+Output 
+ 
+The number is 0; 
+ 
+The number is 1; 
+ 
+The number is 2; 
+ 
+The number is 3;
+ 
+Eg. Continue Statement
+1.	using System;  
+2.	using System.Collections;  
+3.	using System.Linq;  
+4.	using System.Text;  
+5.	namespace continue_example {  
+6.	    Class cntnu_stmt {  
+7.	        public static void main(String[] {  
+8.	                for (int i = 0; i <= 5; i++) {  
+9.	                    if (i == 4) {  
+10.	                        continue;  
+11.	                    }  
+12.	                    Console.WriteLine(“The number is "+ i);   
+13.	                        Console.ReadLine();  
+14.	                    }  
+15.	                }  
+16.	            }  
+17.	        }  
+Output
+ 
+The number is 1;
+ 
+The number is 2;
+ 
+The number is 3;
+ 
+The number is 5;
+ 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Finalize
+Finalize() is called by the Garbage Collector before an object that is eligible for collection is reclaimed. Garbage collector will take the responsibility to deallocate the memory for the unreferenced object. The Garbage Collector calls this method at some point after there are no longer valid references to that object in memory.
+
+The framework does not guarantee that when this will happen, we can force for Garbage Collection but it will hurt performance of a program. Finalize() belongs to the Object class and it will be called by the runtime.
+
+Example
+using System;
+namespace DemoApplication{
+   public class Demo{
+      ~Demo(){
+         Console.WriteLine("Finalize called");
+      }
+   }
+}
+Dispose
+There are some resources like windows handles, database connections, network connections, files, etc. which cannot be collected by the Garbage Collector. If we want to explicitly release some specific objects then this is the best to implement IDisposable and override the Dispose() method of IDisposable interface.
+
+The Dispose() method is not called automatically and we must explicitly call it from a client application when an object is no longer needed. Dispose() can be called even if other references to the object are alive.
+
+Example
+using System;
+namespace DemoApplication{
+   public class Demo : IDisposable{
+      private bool disposed = false;
+      public void Dispose(){
+         Dispose(true);
+         GC.SuppressFinalize(this);
+      }
+      protected virtual void Dispose(bool disposing){
+         if (!disposed){
+            if (disposing){
+               //clean up managed objects
+            }
+            //clean up unmanaged objects
+            disposed = true;
+         }
+      }
+   }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+16. What are delegates in C# and the uses of delegates?
+ 
+A delegate is an object which refers to a method or you can say it is a reference type variable that can hold a reference to the methods. Delegates in C# are similar to the function pointer in C/C++. It provides a way which tells which method is to be called when an event is triggered. 
+For example, if you click on a Button on a form (Windows Form application), the program would call a specific method. In simple words, it is a type that represents references to methods with a particular parameter list and return type and then calls the method in a program for execution when it is needed.
+Important Points About Delegates: 
+ 
+
+Provides a good way to encapsulate the methods.
+Delegates are the library class in System namespace.
+These are the type-safe pointer of any method.
+Delegates are mainly used in implementing the call-back methods and events.
+Delegates can be chained together as two or more methods can be called on a single event.
+It doesn’t care about the class of the object that it references.
+Delegates can also be used in “anonymous methods” invocation.
+Anonymous Methods(C# 2.0) and Lambda expressions(C# 3.0) are compiled to delegate types in certain contexts. Sometimes, these features together are known as anonymous functions.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+17. What are sealed classes in C#?
+ 
+Sealed classes are used to restrict the inheritance feature of object-oriented programming. Once a class is defined as a sealed class, the class cannot be inherited. 
+ 
+In C#, the sealed modifier is used to define a class as sealed. In Visual Basic .NET the Not Inheritable keyword serves the purpose of the sealed class. If a class is derived from a sealed class then the compiler throws an error. 
+ 
+If you have ever noticed, structs are sealed. You cannot derive a class from a struct. 
+ 
+The following class definition defines a sealed class in C#:
+1.	// Sealed class    
+2.	sealed class SealedClass    
+3.	{       
+4.	}
+
+ //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+18. What are partial classes?
+ 
+A partial class is only used to split the definition of a class in two or more classes in the same source code file or more than one source file. You can create a class definition in multiple files, but it will be compiled as one class at run time. Also, when you create an instance of this class, you can access all the methods from all source files with the same object.
+ 
+Partial Classes can be created in the same namespace. It isn't possible to create a partial class in a different namespace. So use the “partial” keyword with all the class names that you want to bind together with the same name of a class in the same namespace. Let’s see an example:
+ 
+/////--A partial class is a special feature of C#. It provides a special ability to implement the functionality of a single class into multiple files and all these files are combined into a single class file when the application is compiled. A partial class is created by using a partial keyword
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Boxing
+The process of Converting a Value Type (char, int etc.) to a Reference Type(object) is called Boxing.
+Boxing is implicit conversion process in which object type (super type) is used.
+The Value type is always stored in Stack. The Referenced Type is stored in Heap.
+Example :
+int num = 23; // 23 will assigned to num
+Object Obj = num; // Boxing
+ 
+ 
+ 
+Unboxing
+ 
+The process of converting reference type into the value type is known as Unboxing.
+It is explicit conversion process.
+Example :
+int num = 23;         // value type is int and assigned value 23
+Object Obj = num;    // Boxing
+int i = (int)Obj;    // Unboxing
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+22. What are the differences between IEnumerable and IQueryable?
+IEnumerable
+ 
+Is the parent interface for all non-generic collections in System.Collections namespace like ArrayList, HastTable, etc. that can be enumerated. The generic version of this interface is IEnumerable<T>, which a parent interface of all generic collections class in System.Collections.Generic namespace, like List<> and more. 
+
+IQueryable
+ 
+As per MSDN, the IQueryable interface is intended for implementation by query providers. It is only supposed to be implemented by providers that also implement IQueryable<T>. If the provider does not also implement IQueryable<T>, the standard query operators cannot be used on the provider's data source.
+ 
+The IQueryable interface inherits the IEnumerable interface so that if it represents a query, the results of that query can be enumerated. Enumeration causes the expression tree associated with an IQueryable object to be executed. The definition of "executing an expression tree" is specific to a query provider. For example, it may involve translating the expression tree to an appropriate query language for the underlying data source. Queries that do not return enumerable results are executed when the Execute method is called.
+ 
+IQueryable
+IEnumerable belongs to System.Collections namespace.
+
+IEnumerable is the best way to write query on collections data type like List, Array etc.
+
+IEnumerable is the return type for LINQ to Object and LINQ to XML queries.
+
+IEnumerable doesn't support lazy loading. So it's not a recommended approach for paging kind of scenarios.
+
+supports by Extension methods are supports IEnumerable takes functional objects for LINQ Query's.
+
+IQueryable
+
+IQueryable belongs to System.Linq namespace.
+
+IQueryable is the best way to write query data like remote database, service collections.
+
+IQueryable is the return type of LINQ to SQL queries.
+
+IQueryable support lazy loading so we can also use in paging kind of scenarios.
+
+IQueryable implements IEnumerable so indirectly it's also supports Extensions methods.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+25. What is the Constructor Chaining in C#? 
+
+Constructor chaining is an approach where a constructor calls another constructor in the same class or base class
+
+
+26. What’s the difference between the Array.CopyTo() and Array.Clone()?
+ 
+The Array.Clone() method creates a shallow copy of an array. A shallow copy of an Array copies only the elements of the Array, whether they are reference types or value types, but it does not copy the objects that the references refer to. The references in the new Array point to the same objects that the references in the original Array point to.
+ 
+The CopyTo() static method of the Array class copies a section of an array to another array. The CopyTo method copies all the elements of an array to another 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+27.Singletone	
+
+Ensures a class has only one instance and provides a global point of access to it.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+30. What are Indexers in C#?
+ 
+C# introduces a new concept known as Indexers which are used for treating an object as an array. The indexers are usually known as smart arrays in C#. They are not an essential part of object-oriented programming.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+31. What is a multicast delegate in C#?
+ 
+Delegate is one of the base types in .NET. Delegate is a class that is used to create and invoke delegates at runtime.
+ 
+A delegate in C# allows developers to treat methods as objects and invoke them from their code.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+32. Difference between the Equality Operator (==) and Equals() Method in C#
+ 
+Both the == Operator and the Equals() method are used to compare two value type data items or reference type data items. The Equality Operator (==) is the comparison operator and the Equals() method compares the contents of a string. The == Operator compares the reference identity while the Equals() method compares only contents. Let’s see with some examples.
+ 
+In this example, we assigned a string variable to another variable. A string is a reference type and in the following example, a string variable is assigned to another string variable so they are referring to the same identity in the heap and both have the same content so you get True output for both the == Operator and the Equals() method.
+1.	using System;    
+2.	namespace ComparisionExample {    
+3.	    class Program {    
+4.	        static void Main(string[] args) {    
+5.	            string name = "sandeep";    
+6.	            string myName = name;    
+7.	            Console.WriteLine("== operator result is {0}", name == myName);    
+8.	            Console.WriteLine("Equals method result is {0}", name.Equals(myName));    
+9.	            Console.ReadKey();    
+10.	        }    
+11.	    }    
+12.	}    
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+public	:There are no restrictions on accessing public members.
+
+
+private	: Access is limited to within the class definition. This is the default access modifier type if none is formally specified
+
+protected :Access is limited to within the class definition and any class that inherits from the class
+
+internal :Access is limited exclusively to classes defined within the current project assembly
+
+protected internal:Access is limited to the current assembly and types derived from the containing class. All members in the current project and all members in derived class can access the variables.
+
+private protected:Access is limited to the containing class or types derived from the containing class within the current assembly.
+////////////////////////////////////////////////////////////////////////////////////////////
+
+public:	The code is accessible for all classes
+
+private:The code is only accessible within the same class
+
+protected:The code is accessible within the same class, or in a class that is inherited from that class. You will learn more about inheritance in a later chapter
+
+internal:The code is only accessible within its own assembly, but not from another assembly. You will learn more about this in a later chapter
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+41. What are Value types and Reference types in C#?
+ 
+In C#, data types can be of two types, value types, and reference types. Value type variables contain their object (or data) directly. If we copy one value type variable to another then we are actually making a copy of the object for the second variable. Both of them will independently operate on their values, Value type data types are stored on a stack and reference data types are stored on a heap.
+ 
+In C#, basic data types include int, char, bool, and long, which are value types. Classes and collections are reference types.
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+ 42. What is Serialization in C#?
+Serialization in C# is the process of converting an object into a byte stream to store the object to memory, a database, or a file. Its main purpose is to save the state of an object in order to be able to recreate it when needed. The reverse process is called deserialization.
+ 
+There are three types of serialization,
+1.	Binary serialization (Save your object data into binary format).
+2.	Soap Serialization (Save your object data into binary format; mainly used in network-related communication).
+3.	XmlSerialization (Save your object data into an XML file).
+
+
+
+
+Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ 
+44. What is a Jagged Array in C#?
+ 
+A jagged array is an array whose elements are arrays. The elements of a jagged array can be of different dimensions and sizes. A jagged array is sometimes called an "array of arrays."
+ 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+48. What is LINQ in C#?
+LINQ stands for Language Integrated Query. LINQ is a data querying methodology that provides querying capabilities to .NET languages with a syntax similar to a SQL query.
+ 
+LINQ has a great power of querying on any source of data. The data source could be collections of objects, database or XML files. We can easily retrieve data from any object that implements the IEnumerable<T> interface.
+ 
+Advantages of LINQ 
+1.	LINQ offers an object-based, language-integrated way to query over data no matter where that data came from. So through LINQ, we can query a database and XML as well as collections. 
+2.	Compile-time syntax checking
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+ 
+

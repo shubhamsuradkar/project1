@@ -1,0 +1,97 @@
+Disconnected architecture:
+
+Disconnected architecture refers to the mode of architecture in Ado.net where the connectivity between the database and application is not maintained for the full time. Connectivity within this mode is established only to read the data from the database and finally to update the data within the database.
+
+This means during the processing of the application, we need data so that data is fetched from the database and kept in temporary tables. After that whenever data is required, it is fetched from the temporary tables. And finally, when the operations were completed, the connection was established to update the data within the database from the temporary tables
+
+Connected Architecture
+As the name suggests, connected architecture refers to the fact that the connection is established for the full time between the database and application. For e.g. we make a program in C# that is connected with the database for the full time, so that will be connected architecture.
+
+1. Connection-Oriented Architecture
+ 
+In this case, we require a continuous connection with the Data Source for accessing data in it.
+ 
+Here the “DataReader” class holds the data on client machines.
+ 
+2. Disconnected Oriented Architecture
+ 
+In this case, we do not require a continuous connection with the Data Source for accessing data.
+ 
+Here the “DataSet” class holds the data in the client machines.
+ /////////////////////////////////////////////////////
+
+Question 3: How can you define the DataSet structure?
+ 
+Answer 3: A DataSet object falls in disconnected components series. The DataSet consists of a collection of tables, rows, columns and relationships.
+ 
+DataSet contains a collection of DataTables and the DataTable contains a collection of DataRows, DataRelations, and DataColumns. A DataTable maps to a table in the database. The previous DataSet contains a DataTable that maps to the Orders table because you filled it with a SELECT query executed on the Order table.
+
+////////////////////////////////////////////////////////////////////
+
+DATAREADER:
+ data reader provides an easy way for the programmer to read data from a database as if it were coming from a stream. The DataReader is the solution for forward streaming data through ADO.NET.
+
+The DataReader is the solution for forward streaming data through ADO.NET. The data reader is also called a firehose cursor or forward read-only cursor because it moves forward through the data.
+•	DataReader holds only one table at a time.
+•	It only provides read only access mode and cannot write data.
+•	It is not required local storage to data store.
+•	Holds one row at a time.
+•	Uses less memory.
+•	DataReader do not maintain relation.
+
+//////////////////////////////////////////////////////////////////////////////////
+Question 9: Use of DataSet object in ADO.NET?
+ 
+Answer
+•	It is used in a disconnected architecture.
+•	Provides lower performance. A DataSet object has read/write access.
+•	A DataSet object supports multiple tables from various databases.
+•	A DataSet object is bound to multiple controls.
+•	A DataSet object has slower access to data.
+•	A DataSet object is supported by Visual Studio tools.
+•	We can create relations in a dataset.
+•	A Dataset supports integration with XML.
+•	A DataSet communicates with the Data Adapter only.
+•	A DataSet can modify data.
+
+
+
+Used in a connected architecture                                    Used in a disconnected architecture.
+
+Provides better performanc                                          Provides lower performance.
+
+DataReader object has read-only access	                            A DataSet object has read/write access
+
+DataReader object supports a single table                           A DataSet object supports multiple tables from various                                                                     databases.
+based on a single SQL query of one database	
+
+A DataReader object is bound to a single control.	            A DataSet object is bound to multiple controls.
+
+A DataReader object has faster access to data.	                    A DataSet object has slower access to data.
+
+A DataReader object must be manually coded.	                    A DataSet object is supported by Visual Studio tools.
+
+We can't create a relation in a data reader.	                   We can create relations in a dataset.
+
+Whereas a DataReader doesn't support data                          A Dataset supports integration with XML Dataset communicates with the Data 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+What is MVC and why it is used?
+Image result for what is mvc in c#
+Model–view–controller (MVC) is a software design pattern commonly used for developing user interfaces that divide the related program logic into three interconnected elements.
+
+Models. Model objects are the parts of the application that implement the logic for the application s data domain. Often, model objects retrieve and store model state in a database. For example, a Product object might retrieve information from a database, operate on it, and then write updated information back to a Products table in SQL Server.
+In small applications, the model is often a conceptual separation instead of a physical one. For example, if the application only reads a data set and sends it to the view, the application does not have a physical model layer and associated classes. In that case, the data set takes on the role of a model object.
+
+Views. Views are the components that display the application s user interface (UI). Typically, this UI is created from the model data. An example would be an edit view of a Products table that displays text boxes, drop-down lists, and check boxes based on the current state of a Products object.
+
+Controllers. Controllers are the components that handle user interaction, work with the model, and ultimately select a view to render that displays UI. In an MVC application, the view only displays information; the controller handles and responds to user input and interaction. For example, the controller handles query-string values, and passes these values to the model, which in turn queries the database by using the values.
+
+
+//////////////////////////////////////////////////////////////////
+DataAdapter
+DataAdapter will acts as a Bridge between DataSet and database. This dataadapter object is used to read the data from database and bind that data to dataset. Dataadapter is a disconnected oriented architecture
+
+The DataAdapter serves as a bridge between a DataSet and a data source for retrieving and saving data.
+
